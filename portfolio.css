@@ -1,0 +1,223 @@
+/* Importation de la police */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #112240 0%, #0a192f 100%);
+    color: #64ffda;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: floating 6s infinite alternate ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translateY(0px); }
+    to { transform: translateY(20px); }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #64ffda;
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+    transform: scale(1.1);
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin: 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero h3 {
+    font-size: 1.8em;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #64ffda;
+    color: #0a192f;
+    padding: 15px 35px;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(100, 255, 218, 0.4);
+}
+
+.cta-button:hover {
+    background: #52e0c4;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(100, 255, 218, 0.5);
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about-section, .projects-section, .skills-section, .contact-section, .diplomas-section, .certifications-section {
+    background: #112240;
+    margin: 60px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(100, 255, 218, 0.3);
+    max-width: 1100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-section:hover, .projects-section:hover, .skills-section:hover, .contact-section:hover, .diplomas-section:hover, .certifications-section:hover {
+    transform: translateY(-10px);
+}
+
+/* Projets */
+.project-card {
+    background: #233554;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0px 12px 25px rgba(100, 255, 218, 0.4);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* Liste des compétences */
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-section ul li {
+    display: inline-block;
+    background: #64ffda;
+    color: #0a192f;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.skills-section ul li:hover {
+    background: #52e0c4;
+    transform: scale(1.15);
+}
+
+/* Certifications */
+.certifications-section img {
+    height: auto;
+    width: 340px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+    margin: 15px;
+}
+
+.certifications-section img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 25px rgba(100, 255, 218, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #112240;
+    color: #64ffda;
+    margin-top: 60px;
+    font-size: 1.3em;
+    box-shadow: 0px -6px 15px rgba(100, 255, 218, 0.4);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #233554;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.social-icons span {
+    color: #ccd6f6;
+    font-weight: bold;
+    font-size: 1.1em;
+}
